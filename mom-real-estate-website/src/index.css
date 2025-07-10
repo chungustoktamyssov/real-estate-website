@@ -1,0 +1,204 @@
+html, body, #root, .app-container {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background: #4b259b; /* Darker cool purple */
+  color: #fff;
+  padding: 30px 0 15px 0;
+  text-align: center;
+  width: 100vw;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header .header-name {
+  font-size: 2.8rem;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.header .header-options {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.header-option {
+  position: relative;
+}
+
+.header-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+}
+
+.header-btn:hover,
+.header-option:hover > .header-btn {
+  color: #ffc857;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background: #fff;
+  color: #4b259b;
+  min-width: 160px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  z-index: 100;
+  padding: 0.5rem 0;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 0.7rem 1.2rem;
+  color: #4b259b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-link:hover {
+  background: #f5f6fa;
+  color: #32186b;
+}
+
+.footer {
+  background: #f5f6fa; /* Light gray */
+  color: #4b259b;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto;
+}
+
+.buyandsell-bg {
+  min-height: 600px;
+  background: url('./assets/buyandsell.jpg') center bottom/cover no-repeat, #f5f6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buyandsell-buttons {
+  display: flex;
+  gap: 35rem;
+}
+
+.buy-btn, .sell-btn {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4b259b; /* Darker cool purple */
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.buy-btn:hover, .sell-btn:hover {
+  background: #32186b; /* Even darker purple */
+}
+
+.meetassel-section {
+  display: flex;
+  width: 100%;
+  min-height: 480px;
+  background: #f5f6fa; /* Light gray */
+}
+
+.meetassel-image {
+  flex: 1;
+  min-height: 480px;
+  background: #f5f6fa url('./assets/meetassel.jpg') right center/contain no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meetassel-text {
+  flex: 1;
+  background: #f5f6fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 4rem;
+  color: #2d2350; /* Deep purple for text */
+}
+
+.meetassel-text h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: #4b259b;
+}
+
+.meetassel-text h2 span {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #32186b; /* Even darker purple accent */
+  margin-top: 0.5rem;
+}
+
+.meetassel-text p {
+  font-size: 1.2rem;
+  color: #2d2350;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.meetassel-btn {
+  background: #4b259b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.meetassel-btn:hover {
+  background: #32186b;
+}
