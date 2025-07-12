@@ -1,16 +1,26 @@
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
-import BuyAndSell from './BuyAndSell.jsx'
-import MeetAssel from './MeetAssel.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
+import Home from './Home.jsx';
+import BuyingProcess from './BuyingProcess.jsx'
+import BuyingListings from './BuyingListings.jsx'
 
 function App() {
   return (
-    <div className="app-container">
-      <Header />
-      <MeetAssel />
-      <BuyAndSell />
-      <Footer />
-    </div>
+    <Router>
+      <div className="app-container">
+        <Header />
+        <Routes>
+          {/* Each Route matches a URL path to a component */}
+          <Route path="/home" element={<Home />} />
+          <Route path="/buying/process" element={<BuyingProcess />} />
+          <Route path="/buying/listings" element={<BuyingListings />} />
+
+          {/* <Route path="*" element={<Home />} /> */}
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

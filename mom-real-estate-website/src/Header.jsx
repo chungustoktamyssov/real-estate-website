@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 const menuItems = [
     {
@@ -28,6 +29,7 @@ const menuItems = [
 
 function Header() {
     const [openIndex, setOpenIndex] = useState(null);
+    const navigate = useNavigate();
 
     return (
         <header className="header">
@@ -35,10 +37,13 @@ function Header() {
                 Assel Abisheva
             </h1>
             <ul className="header-options">
-                <li
-                    className="header-option"
-                >
-                    <button className="header-btn" onClick={() => window.location.href = '/home'}>Home</button>
+                <li className="header-option">
+                    <button
+                        className="header-btn"
+                        onClick={() => navigate('/home')}
+                    >
+                        Home
+                    </button>
                 </li>
                 {menuItems.map((item, idx) => (
                     <li
@@ -52,7 +57,7 @@ function Header() {
                             <ul className="dropdown-menu">
                                 {item.submenu.map(sub => (
                                     <li key={sub.label}>
-                                        <a href={sub.link} className="dropdown-link">{sub.label}</a>
+                                        <Link to={sub.link} className="dropdown-link">{sub.label}</Link>
                                     </li>
                                 ))}
                             </ul>
