@@ -21,7 +21,6 @@ const menuItems = [
         label: 'About',
         submenu: [
             { label: 'About Me', link: '/about/me' },
-            { label: 'Client Reviews', link: '/about/reviews' },
             { label: 'Contact', link: '/about/contact' }
         ]
     }

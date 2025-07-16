@@ -202,3 +202,89 @@ html, body {
 .meetassel-btn:hover {
   background: #32186b;
 }
+
+/* Selling Evaluation Form Styles */
+.selling-evaluation-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.selling-evaluation-title {
+  color: #4b259b;
+}
+
+.selling-evaluation-desc {
+  font-size: 1.1rem;
+  color: #2d2350;
+}
+
+.selling-evaluation-form {
+  background: #232323;
+  padding: 2rem;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.selling-evaluation-section {
+  color: #ffc857;
+  margin-bottom: 0;
+}
+
+.selling-evaluation-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.selling-evaluation-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.selling-evaluation-form input[type="text"],
+.selling-evaluation-form input[type="email"],
+.selling-evaluation-form input[type="tel"],
+.selling-evaluation-form select,
+.selling-evaluation-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.selling-evaluation-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.selling-evaluation-radio-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.selling-evaluation-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.98rem;
+}
+
+.selling-evaluation-submit {
+  background: #ffc857;
+  color: #232323;
+  border: none;
+  border-radius: 4px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  margin-top: 1rem;
+}

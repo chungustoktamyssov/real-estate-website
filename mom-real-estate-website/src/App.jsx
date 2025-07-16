@@ -4,6 +4,8 @@ import Footer from './Footer.jsx';
 import Home from './Home.jsx';
 import BuyingProcess from './BuyingProcess.jsx'
 import BuyingListings from './BuyingListings.jsx'
+import SellingProcess from './SellingProcess.jsx'
+import SellingEvaluation from './SellingEvaluation.jsx'
 
 function App() {
   return (
@@ -15,8 +17,10 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/buying/process" element={<BuyingProcess />} />
           <Route path="/buying/listings" element={<BuyingListings />} />
+          <Route path="/selling/process" element={<SellingProcess />} />
+          <Route path="/selling/evaluation" element={<SellingEvaluation />} />
 
-          {/* <Route path="*" element={<Home />} /> */}
+          <Route path="*" element={<Home />} />
         </Routes>
         <Footer />
       </div>
