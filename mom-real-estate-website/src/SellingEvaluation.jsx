@@ -16,8 +16,7 @@ function SellingEvaluation() {
     yearBuilt: '',
     features: '',
     purpose: '',
-    heardAbout: '',
-    agree: false,
+    heardAbout: ''
   });
   const [status, setStatus] = useState(null);
 
@@ -40,45 +39,47 @@ function SellingEvaluation() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus(null);
+    const data = 'dick';
 
-    // Simple required check for agreement
-    if (!form.agree) {
-      setStatus('Please agree to be contacted.');
-      return;
-    }
-
-    try {
-      const res = await fetch('http://localhost:5000/api/send-evaluation', {
+    fetch('/api/send-evaluation', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        // body: JSON.stringify(form),
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json'}
       });
-      if (res.ok) {
-        setStatus('Thank you! Your request was sent.');
-        setForm({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          address: '',
-          city: '',
-          propertyType: '',
-          size: '',
-          bedrooms: '',
-          bathrooms: '',
-          garage: '',
-          yearBuilt: '',
-          features: '',
-          purpose: '',
-          heardAbout: '',
-          agree: false,
-        });
-      } else {
-        setStatus('There was an error. Please try again.');
-      }
-    } catch (err) {
-      setStatus('There was an error. Please try again.');
-    }
+
+    // try {
+    //   const res = await fetch('/api/send-evaluation', {
+    //     method: 'POST',
+    //     // body: JSON.stringify(form),
+    //     body: JSON.stringify(data),
+    //     headers: { 'Content-Type': 'application/json'}
+    //   });
+    //   if (res.ok) {
+    //     setStatus('Thank you! Your request was sent.');
+    //     setForm({
+    //       firstName: '',
+    //       lastName: '',
+    //       email: '',
+    //       phone: '',
+    //       address: '',
+    //       city: '',
+    //       propertyType: '',
+    //       size: '',
+    //       bedrooms: '',
+    //       bathrooms: '',
+    //       garage: '',
+    //       yearBuilt: '',
+    //       features: '',
+    //       purpose: '',
+    //       heardAbout: ''
+    //     });
+    //   } else {
+    //     setStatus('There was an error. Please try again.');
+    //   }
+    // } catch (err) {
+    //   setStatus('There was an error. Please try again.');
+    // }
   };
 
   return (
@@ -256,18 +257,6 @@ function SellingEvaluation() {
             <label>How did you hear about me?:</label>
             <input type="text" name="heardAbout" value={form.heardAbout} onChange={handleChange} />
           </div>
-        </div>
-        <div className="selling-evaluation-row">
-          <label className="selling-evaluation-checkbox">
-            <input
-              type="checkbox"
-              name="agree"
-              checked={form.agree}
-              onChange={handleChange}
-              required
-            />
-            Yes, I agree to be contacted and receive helpful emails and understand I can unsubscribe at anytime.
-          </label>
         </div>
         <button
           type="submit"
